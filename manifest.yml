@@ -3,3 +3,10 @@ applications:
 - name: knowledgebase
   mem: 512M
   path: knowledgebase-ui/target/knowledgebase-ui-0.0.1-SNAPSHOT.war
+  framework:
+    type: java_web
+    runtime: java7
+  stackato:
+    hooks:
+      pre-staging:
+      - sh stackato-setup.sh
