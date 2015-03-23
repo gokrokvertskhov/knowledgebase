@@ -4,3 +4,6 @@ applications:
   mem: 512M
   path: knowledgebase-ui/target/knowledgebase-ui-0.0.1-SNAPSHOT.war
   buildpack:  https://github.com/cloudfoundry/java-buildpack.git
+  services:
+    knowledgedb: mysql
+    strorage: filesystem

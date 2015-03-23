@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.gokrokve.knowledgebase.samples.backend.data.DocumentEntry" table="documents">
+      <meta attribute="class-description">
+         This class contains the document entry detail. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="title" column="title" type="string"/>
+      <property name="date" column="date" type="string"/>
+      <property name="author" column="author" type="string"/>
+      <property name="keywords" column="keywords" type="string"/>
+      <property name="content_type" column="content_type" type="string"/>
+      <property name="content_length" column="content_length" type="int"/>
+      <property name="language" column="language" type="string"/>
+      <property name="_index" column="es_index" type="string"/>
+      <property name="_type" column="es_type" type="string"/>
+      <property name="_id" column="es_id" type="string"/>
+      <property name="_version" column="es_version" type="string"/>	
+   </class>
+</hibernate-mapping>
