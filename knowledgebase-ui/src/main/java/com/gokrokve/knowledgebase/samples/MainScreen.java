@@ -3,7 +3,7 @@ package com.gokrokve.knowledgebase.samples;
 import com.gokrokve.knowledgebase.KnowledgeBaseUI;
 import com.gokrokve.knowledgebase.samples.about.AboutView;
 import com.gokrokve.knowledgebase.samples.crud.SampleCrudView;
-
+import com.gokrokve.knowledgebase.views.DocumentCrudView;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.FontAwesome;
@@ -29,8 +29,8 @@ public class MainScreen extends HorizontalLayout {
         final Navigator navigator = new Navigator(ui, viewContainer);
         navigator.setErrorView(ErrorView.class);
         menu = new Menu(navigator);
-        menu.addView(new SampleCrudView(), SampleCrudView.VIEW_NAME,
-                SampleCrudView.VIEW_NAME, FontAwesome.EDIT);
+        menu.addView(new DocumentCrudView(), DocumentCrudView.VIEW_NAME,
+        		DocumentCrudView.VIEW_NAME, FontAwesome.EDIT);
         menu.addView(new AboutView(), AboutView.VIEW_NAME, AboutView.VIEW_NAME,
                 FontAwesome.INFO_CIRCLE);
 

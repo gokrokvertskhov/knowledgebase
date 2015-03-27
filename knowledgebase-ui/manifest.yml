@@ -1,0 +1,7 @@
+---
+applications: 
+- name: knowledgebase
+  mem: 512M
+  path: target/knowledgebase-ui-0.0.1-SNAPSHOT.war
+  buildpack:  java
+  services:
